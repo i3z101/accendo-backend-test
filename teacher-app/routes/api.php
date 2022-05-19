@@ -30,10 +30,5 @@ Route::prefix("v1/")->group(function(){
         Route::get("view-solutions", [SolutionController::class, "viewHomeworkSolutions"]);
         Route::apiResource("homeworks", HomeworkController::class);
     });
-    Route::get("", function() {
-        return response()->json([
-            "message" => "It's working"
-        ]);
-    });
     Route::apiResource("courses", CourseController::class);
 });

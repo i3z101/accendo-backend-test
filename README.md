@@ -33,12 +33,24 @@ git clone https://github.com/i3z101/accendo-backend-test.git
 docker-compose up
 ```
 ```sh
+docker exec teacher-app-composer install
+```
+```sh
 docker exec teacher-app-php cp .env.example .env
+```
+```sh
 docker exec teacher-app-php php artisan key:generate
+```
+```sh
+docker exec student-app-php composer install
+```
+```sh
 docker exec student-app-php cp .env.example .env
+```
+```sh
 docker exec student-app-php php artisan key:generate
 ```
-#### Fill up the database information for both app
+#### Fill up the database information in .env for both app
 #### If you don't want to change anything just copy the db data from docker-compose file
 #### If you changed the data from docker-compose update it here as well
 ```sh
@@ -51,12 +63,16 @@ DB_PASSWORD=db-password
 ```
 ```sh
 docker exec teacher-app-php php artisan migrate
+```
+```sh
 docker exec student-app-php php artisan migrate
 ```
 
 ### If faild after settings up every thing
 ```sh
 docker-compose down
+```
+```sh
 docker-compose up --build
 ```
 
@@ -86,11 +102,18 @@ DB_USERNAME=db-user
 DB_PASSWORD=db-password
 ```
 
+## YOU CAN TEST THE APIS:
+## teacher-app: localhost:8000 / 127.0.0.1:8000
+## student-app: localhost:5000 / 127.0.0.1:5000
+
+# -----------------------
+
 # SOME NOTES:
-##### 1- You will find some models are decoupled from each other. The separation came after analysis and found it better to split the models that relate to each projecr.
-##### 2- You will find that many controllers and you may wonder why he did not combine it. Well, after the analysis it is better to separate the contorllers with its module. This will make the dealing with the database more easily and for controllers they will be maintainable, testable, and extendable in the future as well as will save developers time.
-##### 3- for the synchronization schema between developement and production database, to be honest I failed to handle it and finding a related library ): I hope this will not effect my assessing
-##### 4- If you use docker from windows, you will find that it is very slow, this is not my problem. It is windows operating system because with docker in windows we should use virtual machine.
+##### 1- You will find a route in post man called view-all-courses-by-admin & add-new-course-by-admin. These two just for ensuring data is saved in the database. This should have also a secured api but I did not do that because I want it for testing purposes ONLY.
+##### 2- You will find some models are decoupled from each other. The separation came after analysis and found it better to split the models that relate to each projecr.
+##### 3- You will find that many controllers and you may wonder why he did not combine it. Well, after the analysis it is better to separate the contorllers with its module. This will make the dealing with the database more easily and for controllers they will be maintainable, testable, and extendable in the future as well as will save developers time.
+##### 4- for the synchronization schema between developement and production database, to be honest I failed to handle it and finding a related library ): I hope this will not effect my assessing
+##### 5- If you use docker from windows, you will find that it is very slow, this is not my problem. It is windows operating system because with docker in windows we should use virtual machine.
 
 
 
