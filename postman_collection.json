@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "8a8b7c2e-8c7b-41f2-850c-e8e6411b0504",
+		"name": "school",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "teacher-app",
+			"item": [
+				{
+					"name": "homeworks-solutions",
+					"item": [
+						{
+							"name": "all-homeworks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDExIiwidGVhY2hlcklkIjoyLCJleHAiOjE2NTI5NjA2Njd9.lEeJcZ0fKVEHQTC0lhJS1H2ToR7cogi_xedxBNZKKTk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/teachers/homeworks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teachers",
+										"homeworks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-homework",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDExIiwidGVhY2hlcklkIjoyLCJleHAiOjE2NTI3MTQwMTF9.sBhU6Cst7vfYW-m6gQaPhst5KbRDxEA2WcgFyIqVJTg",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"homeworkQuestion\": \"What is Agile ?\",\r\n    \"courseId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/teachers/homeworks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teachers",
+										"homeworks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-homework",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDEiLCJ0ZWFjaGVySWQiOjM0LCJleHAiOjE2NTI2MTIwNjd9.1tXRFbLw1xfH_l0dbtT4sd4aGILeEmn-VJMUE2EpXSA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"homeworkQuestion\": \"Waht is sorting ?\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/teachers/homeworks/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teachers",
+										"homeworks",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-homework",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDEiLCJ0ZWFjaGVySWQiOjEsImV4cCI6MTY1MjYxMzY0N30.0b8G1y4GNbpKrN_3m_cWaqzDKPXzaiuSlAREckmsQ44",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/teachers/homeworks/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teachers",
+										"homeworks",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view-solutions",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDExIiwidGVhY2hlcklkIjoyLCJleHAiOjE2NTI5NjA2Njd9.lEeJcZ0fKVEHQTC0lhJS1H2ToR7cogi_xedxBNZKKTk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/teachers/view-solutions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teachers",
+										"view-solutions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-mark",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDExIiwidGVhY2hlcklkIjoyLCJleHAiOjE2NTI5NjA2Njd9.lEeJcZ0fKVEHQTC0lhJS1H2ToR7cogi_xedxBNZKKTk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mark\": 20.55,\r\n    \"solutionId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/teachers/add-solution-mark",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teachers",
+										"add-solution-mark"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login-registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teacherName\": \"aziz1011\",\r\n    \"teacherPassword\": \"AZZOZz12345#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/teachers/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teachers",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDEyIiwidGVhY2hlcklkIjoxLCJleHAiOjE2NTI5NTkyNzZ9.kTz3XcjaVpwelj2-e2guAmflbXK8hNt7UFyBaAIQs-k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/teachers/add-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teachers",
+								"add-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "available-courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyTmFtZSI6ImF6aXoxMDEyIiwidGVhY2hlcklkIjozLCJleHAiOjE2NTI3MjgzMTd9.mdz7kQLa4TLtGWIG8xP9OO922wwZrsY6_2nlNebESfI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/teachers/view-available-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teachers",
+								"view-available-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registered-courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50TmFtZSI6IkF6b3owMDIiLCJzdHVkZW50SWQiOjQsImV4cCI6MTY1Mjk2MDAzNX0.Go-uuklb3OpWjpmSlFsqsfAOp6OPWOfWkaJvpblyS4o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/teachers/view-registered-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teachers",
+								"view-registered-courses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student-app",
+			"item": [
+				{
+					"name": "courses",
+					"item": [
+						{
+							"name": "view-available-courses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50TmFtZSI6IkF6b3owMDIiLCJzdHVkZW50SWQiOjQsImV4cCI6MTY1Mjk2MDAzNX0.Go-uuklb3OpWjpmSlFsqsfAOp6OPWOfWkaJvpblyS4o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/students/view-available-courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"view-available-courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view-registered-courses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50TmFtZSI6IkF6b3owMDIiLCJzdHVkZW50SWQiOjQsImV4cCI6MTY1Mjk2MDAzNX0.Go-uuklb3OpWjpmSlFsqsfAOp6OPWOfWkaJvpblyS4o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/students/view-registered-courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"view-registered-courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50TmFtZSI6IkF6b3owMDIiLCJzdHVkZW50SWQiOjQsImV4cCI6MTY1Mjk2MDAzNX0.Go-uuklb3OpWjpmSlFsqsfAOp6OPWOfWkaJvpblyS4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courseId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/students/add-course",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"add-course"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "homework-solutions",
+					"item": [
+						{
+							"name": "view-homeworks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50TmFtZSI6IkF6b3owMDIiLCJzdHVkZW50SWQiOjQsImV4cCI6MTY1Mjk2MDAzNX0.Go-uuklb3OpWjpmSlFsqsfAOp6OPWOfWkaJvpblyS4o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/students/view-homeworks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"view-homeworks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-solution",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50TmFtZSI6IkF6b3owMDIiLCJzdHVkZW50SWQiOjQsImV4cCI6MTY1Mjk2MDAzNX0.Go-uuklb3OpWjpmSlFsqsfAOp6OPWOfWkaJvpblyS4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"solution\": \"Agile process\",\r\n    \"homeworkId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/students/add-solution",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"add-solution"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view-solutions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50TmFtZSI6IkF6b3owMDIiLCJzdHVkZW50SWQiOjQsImV4cCI6MTY1Mjk2MDAzNX0.Go-uuklb3OpWjpmSlFsqsfAOp6OPWOfWkaJvpblyS4o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/students/view-solutions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"view-solutions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login-register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentName\": \"Azoz002\",\r\n    \"studentPassword\":\"AZZOZz12345#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/students/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "view-all-courses-by-admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-new-course-by-admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"Web Development Bootcamp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

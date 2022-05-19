@@ -1,0 +1,4 @@
+student-app/.env
+student-app/vendor
+teacher-app/.env
+teacher-app/vendor
