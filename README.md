@@ -24,7 +24,7 @@
 Install the dependencies and devDependencies and start the server.
 
 Follow these steps one by one
-
+## Option 1 with docker
 ### Make sure you already have installed php and laravel
 ```sh
 git clone https://github.com/i3z101/accendo-backend-test.git
@@ -54,10 +54,36 @@ docker exec teacher-app-php php artisan migrate
 docker exec student-app-php php artisan migrate
 ```
 
-### If failed after settings up every thing
+### If faild after settings up every thing
 ```sh
 docker-compose down
 docker-compose up --build
+```
+
+## Option 2 withou docker
+### afetr clone
+```sh
+cd teacher-app
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan serve
+```
+```sh
+cd student-app
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan serve --port=5000
+```
+
+```sh
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=db-name
+DB_USERNAME=db-user
+DB_PASSWORD=db-password
 ```
 
 # SOME NOTES:
