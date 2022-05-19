@@ -9,7 +9,7 @@
 - This project implements a middleware called authorization to check the authority of the user
 - This repository contains the database ERD
 - This repository contains the required collection of postman
-- This project implements docker & docker compose
+- This project implements docker & docker compose.
 
 # -----------------------
 ## Features
@@ -55,7 +55,7 @@ docker exec student-app-php php artisan key:generate
 #### If you changed the data from docker-compose update it here as well
 ```sh
 DB_CONNECTION=mysql
-DB_HOST=mysql[Do not change it]
+DB_HOST=mysql
 DB_PORT=3306
 DB_DATABASE=db-name
 DB_USERNAME=db-user
@@ -66,6 +66,13 @@ docker exec teacher-app-php php artisan migrate
 ```
 ```sh
 docker exec student-app-php php artisan migrate
+```
+### If you want to seed the teachers and students
+```sh
+docker exec teacher-app-php php artisan db:seed
+```
+```sh
+docker exec student-app-php php artisan db:seed
 ```
 
 ### If faild after settings up every thing
@@ -100,6 +107,14 @@ DB_PORT=3306
 DB_DATABASE=db-name
 DB_USERNAME=db-user
 DB_PASSWORD=db-password
+```
+
+### If you want to seed the teachers and students
+```sh
+php artisan db:seed
+```
+```sh
+php artisan db:seed
 ```
 
 ## YOU CAN TEST THE APIS:
