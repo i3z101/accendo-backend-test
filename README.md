@@ -54,7 +54,7 @@ docker exec teacher-app-php php artisan migrate
 docker exec student-app-php php artisan migrate
 ```
 
-### If faild after settings up every thing
+### If failed after settings up every thing
 ```sh
 docker-compose down
 docker-compose up --build
